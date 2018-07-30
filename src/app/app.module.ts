@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing } from "./app.routing";
 
+import { MainComponent } from './main/main.component';
 import { AppComponent } from './app.component';
 import { HttpService } from './http.service';
 
@@ -23,7 +24,8 @@ library.add(fa);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,7 @@ library.add(fa);
     routing,
     FontAwesomeModule
   ],
-  providers: [ HttpService, CommonService ],
+  providers: [ HttpService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

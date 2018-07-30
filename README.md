@@ -10,6 +10,7 @@ The list of technologies:
 - Bootstrap 4
 - jQuery
 - Font Awesome 5
+- Markdown
 - gh-pages
 
 

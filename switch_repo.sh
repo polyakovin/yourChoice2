@@ -4,3 +4,4 @@
   # git commit
   # git push
   # project folder name
+  # npm i
