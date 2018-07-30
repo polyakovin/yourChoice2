@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-main',
@@ -6,10 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  features = [];
+  renderedMarkdown = '';
 
-  constructor() { }
+  constructor(private http: HttpService) { }
 
   ngOnInit() {
+    this.getFeatures();
+    this.getTestMarkdownPage();
   }
 
+  getFeatures() {
+    this.http.get("assets/data/features.json").subscribe(
+      features => this.features = features
+    );
+  }
+
+  getTestMarkdownPage() {
+    this.http.getMarkdown("https://raw.githubusercontent.com/sindresorhus/awesome/master/readme.md").subscribe(
+      renderedMarkdown => this.renderedMarkdown = renderedMarkdown
+    );
+  }
 }
