@@ -29,6 +29,7 @@ function change_project_name {
   rewrite_old_files
   remove_temp_folders
   change_main_folder_name
+  switch_folder
 }
 
 function create_temp_folders {
@@ -59,6 +60,10 @@ function remove_temp_folders {
 
 function change_main_folder_name {
   mv ../ngTemplate "../$new_project_name"
+}
+
+function switch_folder {
+  cd "../$new_project_name"
 }
 
 run_script
