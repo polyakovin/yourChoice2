@@ -1,3 +1,7 @@
+cd ..
+root_directory=$(pwd)
+cd ngTemplate
+
 new_repo=$1
 new_project_name=$(echo $new_repo | rev | cut -d '/' -f 1 | cut -d '.' -f 2 | rev)
 temp_folder_name="_temp"
@@ -63,7 +67,7 @@ function change_main_folder_name {
 }
 
 function switch_folder {
-  cd "../$new_project_name"
+  cd "$root_directory/$new_project_name"
 }
 
 run_script
