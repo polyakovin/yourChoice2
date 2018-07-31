@@ -11,8 +11,7 @@ function run_script {
 
 function change_git_repositiory {
   git remote remove origin
-  git remote ad
-  d origin $new_repo
+  git remote add origin $new_repo
   git add .
   git commit -m "project renamed to $new_project_name"
   git push --set-upstream origin master
