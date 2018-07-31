@@ -24,7 +24,7 @@ export class MainComponent implements OnInit {
   }
 
   getTestMarkdownPage() {
-    this.http.getMarkdown("https://raw.githubusercontent.com/sindresorhus/awesome/master/readme.md").subscribe(
+    this.http.getMarkdown("https://raw.githubusercontent.com/polyakovin/ngTemplate/master/README.md").subscribe(
       renderedMarkdown => this.renderedMarkdown = renderedMarkdown
     );
   }
