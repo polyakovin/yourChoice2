@@ -16,7 +16,8 @@ function run_script {
 
 function change_git_repositiory {
   git remote remove origin
-  git remote add origin $new_repo
+  git remote ad
+  d origin $new_repo
   git add .
   git commit -m "project renamed to $new_project_name"
   git push --set-upstream origin master
@@ -31,7 +32,7 @@ function change_project_name {
   replace_project_name
   switch_repository_name
   rewrite_old_files
-  remove_temp_folders
+  remove_temp_folders_and_script
   change_main_folder_name
   switch_folder
 }
@@ -58,8 +59,8 @@ function rewrite_old_files {
   done
 }
 
-function remove_temp_folders {
-  rm -rf $temp_folder_name
+function remove_temp_folders_and_script {
+  rm -rf $temp_folder_name $0
 }
 
 function change_main_folder_name {
