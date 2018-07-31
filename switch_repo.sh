@@ -1,12 +1,7 @@
-cd ..
-root_directory=$(pwd)
-cd ngTemplate
-
 new_repo=$1
 new_project_name=$(echo $new_repo | rev | cut -d '/' -f 1 | cut -d '.' -f 2 | rev)
 temp_folder_name="_temp"
 temp_folder_name_length=$(($(echo $temp_folder_name | wc -m) + 1))
-
 
 function run_script {
   change_project_name
@@ -34,7 +29,6 @@ function change_project_name {
   rewrite_old_files
   remove_temp_folders_and_script
   change_main_folder_name
-  switch_folder
 }
 
 function create_temp_folders {
@@ -65,10 +59,6 @@ function remove_temp_folders_and_script {
 
 function change_main_folder_name {
   mv ../ngTemplate "../$new_project_name"
-}
-
-function switch_folder {
-  cd "$root_directory/$new_project_name"
 }
 
 run_script
