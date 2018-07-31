@@ -1,44 +1,67 @@
-# changing all project-name recordings in all files
 new_repo=new_repo
 new_project_name=new_project_name
 
-mkdir 1
-mkdir 1/src
-mkdir 1/src/app
-mkdir 1/src/app/main
+function run_script {
+  change_project_name
+  change_git_repositiory
+  install_dependencies
+}
 
-mkdir 2
-mkdir 2/src
-mkdir 2/src/app
-mkdir 2/src/app/main
+function change_project_name {
+  temp_folder_name="1"
+  temp_folder_name_length=$(echo $temp_folder_name | wc -m)
 
+  create_temp_folders
+  replace_project_name
+  switch_repository
+  rewrite_old_files
+  remove_temp_folders
+  change_main_folder_name
+}
 
-for file_name in angular.json package.json src/app/main/main.component.html src/index.html; do
-  sed "s/abracadabra/$new_project_name/g" < $file_name > "1/$file_name"
-done
+function change_git_repositiory {
+  git remote remove origin
+  git remote add origin $new_repo
+  git add .
+  git commit -m "project renamed to $new_project_name"
+  git push --set-upstream origin master
+}
 
-main_component=
-sed "s/abracadabora_repo/$new_repo/g" < "1/src/app/main/main.component.html" > "2/src/app/main/main.component.html"
+function install_dependencies {
+  npm i
+}
 
-mv "2/src/app/main/main.component.html" "1/src/app/main/main.component.html"
+function create_temp_folders {
+  mkdir "$temp_folder_name"
+  mkdir "$temp_folder_name/src"
+  mkdir "$temp_folder_name/src/app"
+  mkdir "$temp_folder_name/src/app/main"
+}
 
+function replace_project_name {
+  for file_name in angular.json package.json src/app/main/main.component.html src/index.html; do
+    sed "s/abracadabra/$new_project_name/g" < $file_name > "$temp_folder_name/$file_name"
+  done
+}
 
-for file_name in 1/angular.json 1/package.json 1/src/app/main/main.component.html 1/src/index.html; do
-  old_file_name=$(echo $file_name | cut -c 3-)
-  sed "s/abracadabra/$new_project_name/g" < $file_name > $old_file_name
-done
+function switch_repository {
+  sed "s/abracadabora_repo/$new_repo/g" < "$temp_folder_name/src/app/main/main.component.html" > "$temp_folder_name/src/app/main/main-temp.component.html"
+  mv "$temp_folder_name/src/app/main/main-temp.component.html" "$temp_folder_name/src/app/main/main.component.html"
+}
 
-rm -rf 1 2
+function rewrite_old_files {
+  for file_name in "$temp_folder_name/angular.json" "$temp_folder_name/package.json" "$temp_folder_name/src/app/main/main.component.html" "$temp_folder_name/src/index.html"; do
+    old_file_name=$(echo $file_name | cut -c $temp_folder_name_length-)
+    sed "s/abracadabra/$new_project_name/g" < $file_name > $old_file_name
+  done
+}
 
-# changing project folder name
-# mv ../ngTemplate "../$new_project_name"
+function remove_temp_folders {
+  rm -rf $temp_folder_name
+}
 
-# changing git repositiory
-# git remote remove origin
-# git remote add origin $new_repo
-# git add .
-# git commit -m "project renamed to $new_project_name"
-# git push --set-upstream origin master
+function change_main_folder_name {
+  mv ../ngTemplate "../$new_project_name"
+}
 
-# install all the dependencies
-# npm i
+run_script
