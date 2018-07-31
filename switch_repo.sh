@@ -59,6 +59,7 @@ function remove_temp_folders_and_script {
 
 function change_main_folder_name {
   mv ../ngTemplate "../$new_project_name"
+  cd ..
 }
 
 run_script
