@@ -1,22 +1,13 @@
-new_repo=new_repo
-new_project_name=new_project_name
+new_repo=$1
+new_project_name=$(echo $new_repo | rev | cut -d '/' -f 1 | cut -d '.' -f 2 | rev)
+temp_folder_name="_temp"
+temp_folder_name_length=$(($(echo $temp_folder_name | wc -m) + 1))
+
 
 function run_script {
   change_project_name
   change_git_repositiory
   install_dependencies
-}
-
-function change_project_name {
-  temp_folder_name="1"
-  temp_folder_name_length=$(echo $temp_folder_name | wc -m)
-
-  create_temp_folders
-  replace_project_name
-  switch_repository
-  rewrite_old_files
-  remove_temp_folders
-  change_main_folder_name
 }
 
 function change_git_repositiory {
@@ -31,11 +22,17 @@ function install_dependencies {
   npm i
 }
 
+function change_project_name {
+  create_temp_folders
+  replace_project_name
+  switch_repository_name
+  rewrite_old_files
+  remove_temp_folders
+  change_main_folder_name
+}
+
 function create_temp_folders {
-  mkdir "$temp_folder_name"
-  mkdir "$temp_folder_name/src"
-  mkdir "$temp_folder_name/src/app"
-  mkdir "$temp_folder_name/src/app/main"
+  mkdir -p "$temp_folder_name/src/app/main"
 }
 
 function replace_project_name {
@@ -44,7 +41,7 @@ function replace_project_name {
   done
 }
 
-function switch_repository {
+function switch_repository_name {
   sed "s/abracadabora_repo/$new_repo/g" < "$temp_folder_name/src/app/main/main.component.html" > "$temp_folder_name/src/app/main/main-temp.component.html"
   mv "$temp_folder_name/src/app/main/main-temp.component.html" "$temp_folder_name/src/app/main/main.component.html"
 }
