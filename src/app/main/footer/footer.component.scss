@@ -3,7 +3,9 @@
 .breadcrumb {
 	background-color: $color-secondary;
 	color: $color-bg;
-	margin-top: 50px;
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
 
 	a {
 		color: $color-bg;
