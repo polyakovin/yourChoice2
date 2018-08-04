@@ -1,0 +1,17 @@
+@import "./../../../styles/variables";
+
+.breadcrumb {
+	background-color: $color-secondary;
+	color: $color-bg;
+	margin-top: 50px;
+
+	a {
+		color: $color-bg;
+		text-decoration: underline;
+	}
+}
+
+.breadcrumb > li + li:before {
+	color: $color-bg;
+	// content: "\3E" /* Hex code for > */
+}

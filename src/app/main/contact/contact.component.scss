@@ -1,0 +1,83 @@
+@import "./../../../styles/variables";
+
+.contacts {
+	background-color: $white;
+	border: 1px solid $color-secondary;
+	@include border-radius(10px);
+
+	padding: 10px;
+
+	h4 {
+		text-align: center;
+		margin: 0 0 10px 0;
+	}
+
+	label {
+		font-size: 1.2rem;
+		margin-top: -10px;
+	}
+}
+
+.or {
+	font-size: 2.2rem;
+	padding-top: 87px;
+	text-align: center;
+}
+
+.callback {
+	h4 {
+		margin: 8px 0 10px 0;
+	}
+
+	ul {
+		font-size: 4.1rem;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.callback {
+		ul {
+			font-size: 3.3rem;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.or {
+		padding: 30px 0 30px 0;
+  }
+
+	.callback {
+		text-align: center;
+
+		ul {
+			font-size: 4.3rem;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.or {
+		padding: 30px 0 30px 0;
+	}
+
+	.callback {
+		text-align: center;
+
+		ul {
+			font-size: 4.3rem;
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.callback {
+		h4 {
+			font-size: 2rem;
+		}
+
+		ul {
+			font-size: 3rem;
+		}
+	}
+}

@@ -1,13 +1,99 @@
 @import "./../../../styles/variables";
 
+.header-bg {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	// background-image: url(../assets/images/bg2.jpg);
+	// background-repeat: no-repeat;
+	// background-position: center;
+	z-index: -1;
+	background: url(../assets/images/bg1.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.logo h1 a {
+	width: 70px;
+	height: 80px;
+	background-image: url(../assets/images/logo1.png);
+	margin-right: 20px;
+	display: block
+}
+
 .tel {
 	font-family: $font-primary;
 	font-weight: 600;
 }
 
+.utp {
+	margin: 180px 0 30px 0;
+}
+
+.timer {
+	margin: 10px 0 25px 0;
+}
+
+.pull-left {
+	margin-right: 19px;
+}
+
+.modal {
+	z-index: 999999999
+}
+
+.modal-body {
+	p {
+		color: $color-bg;
+	}
+}
+
+// .modal-content {
+// 	background-color: $color-primary;
+// }
+
+.modal-header {
+	h3 {
+		text-align: center;
+		font-size: 2.2rem;
+		line-height: 100%;
+		font-weight: 600;
+	}
+
+	button span {
+		// width: 40px;
+		// height: 40px;
+		font-weight: 900;
+		font-size: 1.2rem;
+		// display: block;
+		// right: 1px;
+		// top: 31px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.utp {
+		margin-top: 120px;
+  }
+}
+
 @media (max-width: 767px) {
 	.tel, .logo {
 		text-align: center;
+  }
+
+	.utp {
+		margin-top: 80px;
+
+		button {
+			margin-top: 30px
+		}
+
+		div > h2 {
+			font-size: 4.2rem;
+		}
 	}
 }
 
@@ -15,4 +101,10 @@
 	.tel {
 		font-size: 2.9rem;
   }
+
+	.utp {
+		div > h2 {
+			font-size: 3.2rem;
+		}
+	}
 }

@@ -1,0 +1,64 @@
+@import "./../../../styles/variables";
+
+// Слайдер
+#advantages-door, #advantages-door-2, #advantages-door-3 {
+	ul{
+		li {
+			position: absolute;
+			list-style: none;
+			width: 134px;
+			left: 50px;
+		}
+
+		li.show {
+			z-index: 500;
+		}
+	}
+}
+
+#advantages-door-2 ul li {
+	left: 238px;
+}
+
+#advantages-door-3 ul li {
+	left: 420px;
+}
+
+.media-body div {
+	color: gray;
+	font-size: 1.4rem;
+}
+
+// Временный стиль
+.media-left {
+	text-align: center;
+	width: 50px;
+	height: 50px;
+
+	.glyphicon {
+		font-size: 4.2rem;
+		color: $color-secondary;
+	}
+}
+
+// md
+@media (min-width: 992px) and (max-width: 1199px) {
+	#advantages-door, #advantages-door-2 {
+		ul li {
+			width: 144px;
+		}
+	}
+}
+
+// sm
+@media (min-width: 768px) and (max-width: 991px) {
+	#advantages-door ul li {
+		width: 169px;
+	}
+}
+
+@media (max-width: 320px) {
+	.media-body div {
+		font-size: 1.1rem;
+  }
+}
