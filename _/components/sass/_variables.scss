@@ -1,0 +1,47 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Exo+2:400,600,700,900&subset=latin,cyrillic);
+
+$font-primary: 'Exo 2', serif;
+$font-secondary: 'Libre Baskerville', serif;
+
+// Цветовые схемы (палитры)
+$vintage1: #dfe7e4;
+$vintage2: #a7b3a8;
+$vintage3: #885861;
+$vintage4: #534744;
+
+$passion1: #eeae9c;
+$passion2: #301f37;
+$passion3: #5d1a3d;
+$passion4: #6d425d;
+
+$dreams1: #8095e7;
+$dreams2: #ddcfe6;
+$dreams3: #cbfeca;
+$dreams4: #f4e78c;
+
+$seventeens1: #9a9969;
+$seventeens2: #613206;
+$seventeens3: #30699a;
+$seventeens4: #f7f7d0;
+
+$love1: #6b6b63;
+$love2: #ccc9b8;
+$love3: #fdfdfe;
+$love4: #d99087;
+$love5: #88908d;
+
+$white: #fff;
+$black: #000;
+
+$vashvybor1: #1d172a;
+$vashvybor2: #a19baf;
+$vashvybor3: #cdccd0;
+
+
+// Основное оформление
+$color-primary: $vashvybor3;
+$color-secondary: $vashvybor2;
+$color-bg: $vashvybor1;

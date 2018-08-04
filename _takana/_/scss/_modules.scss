@@ -1,0 +1,22 @@
+// Слайдер
+#advantages-door, #advantages-door-2, #advantages-door-3 {
+	ul{
+		li {
+			position: absolute;
+			list-style: none;
+			width: 134px
+		}
+
+		li.show {
+			z-index: 500;
+		}
+	}
+}
+
+#advantages-door-2 ul li {
+	left: 238px;
+}
+
+#advantages-door-3 ul li {
+	left: 420px;
+}

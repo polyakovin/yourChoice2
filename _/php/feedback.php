@@ -1,0 +1,30 @@
+<hr>
+<div class="row">
+	<div class="col col-xs-12">
+		<h3>Отзывы наших клиентов</h3>
+
+		<div class="col hidden-xs col-sm-3 col-md-2 col-md-push-4">
+			<img src="img/door1.jpg" alt="door" class="img-responsive">
+		</div>
+		<div class="col col-xs-12 col-sm-9 col-md-4 col-md-pull-2">
+			<blockquote class="bqreverse">
+				<p>Замечательная дверь. Гораздо лучше той, что стояла раньше! Спасибо.</p>
+				<footer>Игорь</footer>
+			</blockquote>
+		</div>
+		
+		<div class="clearfix hidden-md hidden-lg"></div>
+
+		<div class="col hidden-xs col-sm-3 col-md-2">
+			<img src="img/door2.jpg" alt="door" class="img-responsive">
+		</div>
+		<div class="col col-xs-12 col-sm-9 col-md-4">
+			<blockquote>
+				<p>Классно! Заказал уже 5 дверей&nbsp;— все гармонично подошли к фасаду. Очень доволен качеством исполнения!</p>
+				<footer>Владимир</footer>
+			</blockquote>
+		</div>
+		
+		<div class="h2 text-center col col-xs-12 yourchoise">Это и <b>Ваш Выбор!</b></div>
+	</div>
+</div>

@@ -1,0 +1,178 @@
+body {
+	font-family: $font-primary;
+	font-size: 1.2rem;
+	background: $color-bg;
+	color: $color-primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-primary;
+	color: $color-secondary;
+	text-transform: uppercase;
+	font-weight: 900;
+	margin-top: 25px;
+
+	small {
+		color: $color-primary;
+	}
+}
+
+h1 {
+	font-size: 4.4rem;
+	line-height: 75%;
+}
+
+h2 {
+	font-size: 4.9rem;
+	line-height: 120%;
+	text-transform: none;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 2.6rem;
+	line-height: 120%;
+	font-weight: 600;
+	margin: 40px 0 25px 15px;
+}
+
+h4 {
+	text-transform: none;
+	font-size: 2rem;
+	line-height: 120%;
+	font-weight: 600;
+	// margin: 0 0 15px 15px;
+}
+
+a {
+	color: $seventeens3;
+
+	&:hover {
+		color: darken($seventeens3, 25);
+	}
+}
+
+.tel {
+	font-family: $font-primary;
+	font-weight: 600;
+}
+
+.btn-warning {
+	background-color: $color-primary;
+	border: none;
+	color: $color-bg;
+	font-weight: 600
+}
+
+.thumbnail {
+	border: none;
+	background: none;
+
+	.caption {
+		color: $color-primary;
+		font-size: 2.2rem;
+	}
+}
+
+hr {
+	background-color: $color-secondary;
+	border: none;
+	height: 2px; 
+	width: 100%;
+	margin: 30px 0 0 0;
+}
+
+.media-body div {
+	font-size: 1.4rem;
+}
+
+// Временный стиль
+.media-left {
+	text-align: center;
+	width: 50px;
+	height: 50px;
+
+	.glyphicon {
+		font-size: 4.2rem;
+		color: $color-secondary;
+	}
+}
+
+.modal {
+	z-index: 999999999
+}
+
+.modal-body {
+	p {
+		color: $color-bg;
+	}
+}
+
+.modal-content {
+	// background-color: $color-primary;
+}
+
+.modal-header {
+	h3 {
+		text-align: center;
+		font-size: 2.2rem;
+		line-height: 100%;
+		font-weight: 600;
+	}
+
+	button span {
+		// width: 40px;
+		// height: 40px;
+		font-weight: 900;
+		font-size: 1.2rem;
+		// display: block;
+		// right: 1px;
+		// top: 31px;
+	}
+}
+
+label.small {
+	font-weight: 400;
+	text-align: center;
+	margin: -10px 0 0 0;
+	display: block;
+}
+
+.breadcrumb {
+	background-color: $color-secondary;
+	color: $color-bg;
+	margin-top: 50px;
+
+	a {
+		color: $color-bg;
+		text-decoration: underline;
+	}
+}
+
+.breadcrumb > li + li:before {
+	color: $color-bg;
+	// content: "\3E" /* Hex code for > */
+}
+
+.step {
+	.glyphicon {
+	font-size: 10rem;
+	background-color: $color-secondary;
+	color: $color-bg;
+	padding: 30px;
+	}
+
+	p strong {
+		font-weight: 700;
+	}
+
+}
+
+.step-by-step {
+	height: 0px;
+	position: absolute;
+	top: 141px;
+	width: 70%;
+	margin-left: 15%;
+	border-top: 10px dashed $color-bg;
+}
