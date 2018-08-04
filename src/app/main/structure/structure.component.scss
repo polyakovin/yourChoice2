@@ -1,14 +1,25 @@
 @import "./../../../styles/variables";
 
+h3 {
+  font-size: 2.5rem;
+}
+
 .steps {
   position: relative;
 
   .step {
-    fa-icon {
-    font-size: 10rem;
-    background-color: $color-secondary;
-    color: $color-bg;
-    padding: 30px;
+    .bg {
+      border-radius: 10px;
+      background-color: $color-secondary;
+      width: 100%;
+      max-width: 240px;
+      display: inline-block;
+
+      fa-icon {
+        font-size: 10rem;
+        color: $color-bg;
+        padding: 30px;
+      }
     }
 
     p strong {
@@ -19,7 +30,7 @@
   .step-by-step {
     height: 0px;
     position: absolute;
-    top: 141px;
+    top: 160px;
     width: 70%;
     margin-left: 15%;
     border-top: 10px dashed $color-bg;
