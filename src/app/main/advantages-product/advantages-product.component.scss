@@ -6,8 +6,11 @@
 		li {
 			position: absolute;
 			list-style: none;
-			width: 134px;
-			left: 50px;
+      left: 50px;
+
+      img {
+        width: 134px;
+      }
 		}
 
 		li.show {
@@ -33,10 +36,11 @@
 .media-left {
 	text-align: center;
 	width: 50px;
-	height: 50px;
+  height: 50px;
+  margin-top: 21px;
 
 	fa-icon {
-		font-size: 4.2rem;
+		font-size: 2rem;
 		color: $color-secondary;
 	}
 }
