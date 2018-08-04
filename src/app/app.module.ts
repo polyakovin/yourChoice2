@@ -11,13 +11,27 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { MainComponent } from './main/main.component';
 import { AppComponent } from './app.component';
 import { HttpService } from './http.service';
+import { HeaderComponent } from './main/header/header.component';
+import { StructureComponent } from './main/structure/structure.component';
+import { AdvantagesProductComponent } from './main/advantages-product/advantages-product.component';
+import { AdvantagesCompanyComponent } from './main/advantages-company/advantages-company.component';
+import { FeedbackComponent } from './main/feedback/feedback.component';
+import { ContactComponent } from './main/contact/contact.component';
+import { FooterComponent } from './main/footer/footer.component';
 
 mergeAllIconsToOneObject();
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    HeaderComponent,
+    StructureComponent,
+    AdvantagesProductComponent,
+    AdvantagesCompanyComponent,
+    FeedbackComponent,
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

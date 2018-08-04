@@ -1,47 +1,47 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700|Noto+Serif:400,400i,700&subset=cyrillic');
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Exo+2:400,600,700,900&subset=latin,cyrillic);
 
-// Palette
-$palette1: #dfe7e4;
-$palette2: #a7b3a8;
-$palette3: #885861;
-$palette4: #534744;
-$black:    #000;
-$white:    #fff;
+$font-primary: 'Exo 2', serif;
+$font-secondary: 'Libre Baskerville', serif;
 
-// Basic variables
-$font-primary:   'Noto Sans', sans-serif;
-$font-secondary: 'Noto Serif', serif;
-$color-primary:   $black; // Основной текст
-$color-secondary: $black; // Вспомогательный текст (например, заголовки)
-$color-bg:        $white; // Цвет фона
-$color-link:      $palette2;			// Цвет ссылок
+// Цветовые схемы (палитры)
+$vintage1: #dfe7e4;
+$vintage2: #a7b3a8;
+$vintage3: #885861;
+$vintage4: #534744;
+
+$passion1: #eeae9c;
+$passion2: #301f37;
+$passion3: #5d1a3d;
+$passion4: #6d425d;
+
+$dreams1: #8095e7;
+$dreams2: #ddcfe6;
+$dreams3: #cbfeca;
+$dreams4: #f4e78c;
+
+$seventeens1: #9a9969;
+$seventeens2: #613206;
+$seventeens3: #30699a;
+$seventeens4: #f7f7d0;
+
+$love1: #6b6b63;
+$love2: #ccc9b8;
+$love3: #fdfdfe;
+$love4: #d99087;
+$love5: #88908d;
+
+$white: #fff;
+$black: #000;
+
+$vashvybor1: #1d172a;
+$vashvybor2: #a19baf;
+$vashvybor3: #cdccd0;
 
 
-// Bootstrap variables
-
-// Palette
-$red:           #d9534f;
-$orange:        #f0ad4e;
-$yellow:        #ffd500;
-$green:         #5cb85c;
-$blue:          #0275d8;
-$teal:          #5bc0de;
-$pink:          #ff5b77;
-$purple:        #613d7c;
-$black:         #000;
-$gray-dark:     #292b2c;
-$gray:          #464a4c;
-$gray-light:    #636c72;
-$gray-lighter:  #eceeef;
-$gray-lightest: #f7f7f9;
-$white:         #fff;
-
-// Options
-$enable-rounded:           true;
-$enable-shadows:           false;
-$enable-gradients:         false;
-$enable-transitions:       true;
-$enable-hover-media-query: false;
-$enable-grid-classes:      true;
-$enable-print-styles:      true;
+// Основное оформление
+$color-primary: $vashvybor3;
+$color-secondary: $vashvybor2;
+$color-bg: $vashvybor1;
