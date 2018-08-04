@@ -1,7 +1,7 @@
 @import "./../../../styles/variables";
 
 .step {
-	.glyphicon {
+	fa-icon {
 	font-size: 10rem;
 	background-color: $color-secondary;
 	color: $color-bg;
@@ -35,7 +35,7 @@
 
 @media (max-width: 767px) {
 	.step {
-		.glyphicon {
+		fa-icon {
 			font-size: 7rem;
 			padding: 25px;
 		}
@@ -56,7 +56,7 @@
 
 @media (max-width: 320px) {
 	.step {
-		.glyphicon {
+		fa-icon {
 			font-size: 3.5rem;
 			padding: 15px;
 		}
