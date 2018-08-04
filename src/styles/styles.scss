@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 25px;
 
 	small {
+    font-size: 50%;
 		color: $color-primary;
 	}
 }
@@ -99,3 +100,30 @@ label.small {
 		font-size: 1.5rem;
 	}
 }
+
+
+@media (max-width: 575px) {
+  .hidden-xxs {
+    display: none;
+  }
+} // xxs
+@media (min-width: 576px) and (max-width: 767px) {
+  .hidden-xs {
+    display: none;
+  }
+} // xs
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none;
+  }
+} // sm
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-md {
+    display: none;
+  }
+} // md
+@media (min-width: 1200px) {
+  .hidden-lg {
+    display: none;
+  }
+} // lg
